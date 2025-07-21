@@ -70,7 +70,11 @@ export async function GET(
         rank: index + 1,
       }));
 
-    return NextResponse.json({ leaderboard });
+    return NextResponse.json({ 
+      success: true,
+      data: leaderboard,
+      message: 'Leaderboard fetched successfully'
+    });
   } catch (error) {
     console.error('Error fetching leaderboard:', error);
     return NextResponse.json(

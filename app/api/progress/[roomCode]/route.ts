@@ -8,7 +8,11 @@ export async function GET(
   try {
     const progress = await getProgressForRoom(params.roomCode);
     
-    return NextResponse.json({ progress });
+    return NextResponse.json({ 
+      success: true,
+      data: progress,
+      message: 'Progress fetched successfully'
+    });
   } catch (error) {
     console.error('Error fetching progress:', error);
     return NextResponse.json(

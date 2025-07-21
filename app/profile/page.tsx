@@ -19,8 +19,8 @@ import {
   LogOut
 } from 'lucide-react';
 import { Room } from '@/types';
-import Logo from '@/components/Logo';
-import LoadingSpinner from '@/components/LoadingSpinner';
+import Logo from '../components/Logo';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 export default function ProfilePage() {
   const [user, setUser] = useState<any>(null);
